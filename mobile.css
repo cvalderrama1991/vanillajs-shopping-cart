@@ -1,0 +1,23 @@
+@media screen and (max-width: 600px) {
+  .main-header .main-nav {
+    display: none;
+  }
+  .main-header .main-nav.open {
+    background-color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* align-content: center; */
+    justify-items: center;
+    position: absolute;
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+    top: var(--header-height);
+  }
+  .main-header .main-nav.open .main-nav-list {
+    flex-direction: column;
+  }
+  .main-header .burger-btn {
+    display: grid;
+  }
+}

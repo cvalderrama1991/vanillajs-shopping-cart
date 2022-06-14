@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/mobile.css">
+  <script defer src="/app.js"></script>
+  <title>Drop Bottle</title>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <a href="#home" data-nav-link>DROP<img src="/images/drop.svg" alt="drop icon"> </a>
+    </div>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a href="#about" data-nav-link>About</a></li>
+        <li><a href="#products" data-nav-link>Products</a></li>
+        <li><a href="#contact" data-nav-link>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cart-btn-and-quantity-wrapper">
+      <button id="cart-btn" class="cart-btn">Open Cart</button>
+      <span id="cart-product-quantity-total">0</span>
+    </div>
+    <button id="burger-btn" class="burger-btn">
+      <span class="layer"></span>
+      <span class="layer"></span>
+      <span class="layer"></span>
+    </button>
+    <div id="cart-container" class="cart-container">
+      <h2>Cart</h2>
+      <ul id="cart-list" class="cart-list">
+        <template id="cart-product-template">
+          <li class="cart-product">
+            <img data-cart-product-image src="" alt="">
+            <h3 data-cart-product-name></h3>
+            <p>Price: $<span data-cart-product-price></span></p>
+            <button data-cart-product-decrease-btn class="red-btn">-</button>
+            <h4 data-cart-product-quantity></h4>
+            <button data-cart-product-increase-btn class="blue-btn">+</button>
+            <button data-cart-product-remove-btn class="red-btn">x</button>
+          </li>
+        </template>
+      </ul>
+      <div class="cart-footer">
+        <button id="cart-clear-btn" class="red-btn">Clear Cart</button>
+        <button id="cart-price-total-btn" class="blue-btn">Pay</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Home Section Start -->
+    <section id="home" class="home-section">
+      <div class="home-intro">
+        <h1>Drop Bottle</h1>
+        <p>
+          The Drop Bottle is the perfect liquid container to keep your beverage hot or cold.
+        </p>
+        <div class="home-link-wrapper">
+          <a href="#about">Our Story</a>
+          <a href="#products">Our Products</a>
+        </div>
+      </div>
+      <img class="home-large-bottle-img" src="/images/large-drop-bottle-falling.svg" alt="large drop bottle falling">
+    </section>
+    <!-- Home Section End -->
+    <!-- About Section Start -->
+    <section id="about" class="about-section">
+      <h2>About</h2>
+      <div class="about-container">
+        <div class="about-drop-bottle">
+          <h3>Drop Bottle 36 OZ</h3>
+          <h5>STAY HYDRATED ALL DAY</h5>
+          <p>The Drop Bottle is well insulated and was design to keep your drink cold in the summer, or hot in the cold winter. The Drop Bottle has a removal cap and a large opening for easy cleaning and filling.</p>
+          <a href="#products">Our Products</a>
+        </div>
+        <ul class="about-background-list">
+          <li><img src="images/drop-bottle-aqua.svg" alt="Aqua Drop Bottle"></li>
+          <li><img src="images/drop-bottle-red.svg" alt="Red Drop Bottle"></li>
+          <li><img src="images/drop-bottle-green.svg" alt="Green Drop Bottle"></li>
+          <li><img src="images/drop-bottle-white.svg" alt="White Drop Bottle"></li>
+          <li><img src="images/drop-bottle-pink.svg" alt="Pink Drop Bottle"></li>
+          <li><img src="images/drop-bottle-purple.svg" alt="Purple Drop Bottle"></li>
+          <li><img src="images/drop-bottle-orange.svg" alt="Orange Drop Bottle"></li>
+          <li><img src="images/drop-bottle-yellow.svg" alt="Yellow Drop Bottle"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- About Section End -->
+    <!-- Products Section Start -->
+    <section id="products" class="products-section">
+      <h2>Products</h2>
+      <ul id="product-list" class="product-list">
+        <li class="product-item" data-id="1">
+          <img data-product-image src="images/drop-bottle-white.svg" alt="White Drop Bottle">
+          <h3 data-product-name>White Drop Bottle</h3>
+          <p>Price: $<span data-product-price="35">35</span></p>
+          <button data-add-to-cart-btn="1">Add to Cart</button>
+        </li>
+        <li class="product-item" data-id="2">
+          <img data-product-image src="images/drop-bottle-red.svg" alt="Red Drop Bottle">
+          <h3 data-product-name>Red Drop Bottle</h3>
+          <p>Price: $<span data-product-price="35">35</span></p>
+          <button data-add-to-cart-btn="2">Add to Cart</button>
+        </li>
+        <li class="product-item" data-id="3">
+          <img data-product-image src="images/drop-bottle-green.svg" alt="Green Drop Bottle">
+          <h3 data-product-name>Green Drop Bottle</h3>
+          <p>Price: $<span data-product-price="35">35</span></p>
+          <button data-add-to-cart-btn="3">Add to Cart</button>
+        </li>
+        <li class="product-item" data-id="4">
+          <img data-product-image src="images/drop-bottle-aqua.svg" alt="Aqua Drop Bottle">
+          <h3 data-product-name>Aqua Drop Bottle</h3>
+          <p>Price: $<span data-product-price="35">35</span></p>
+          <button data-add-to-cart-btn="4">Add to Cart</button>
+        </li>
+        <li class="product-item" data-id="5">
+          <img data-product-image src="images/drop-bottle-pink.svg" alt="Pink Drop Bottle">
+          <h3 data-product-name>Pink Drop Bottle</h3>
+          <p>Price: $<span data-product-price="35">35</span></p>
+          <button data-add-to-cart-btn="5">Add to Cart</button>
+        </li>
+        <li class="product-item" data-id="6">
+          <img data-product-image src="images/drop-bottle-purple.svg" alt="Purple Drop Bottle">
+          <h3 data-product-name>Purple Drop Bottle</h3>
+          <p>Price: $<span data-product-price="35">35</span></p>
+          <button data-add-to-cart-btn="6">Add to Cart</button>
+        </li>
+        <li class="product-item" data-id="7">
+          <img data-product-image src="images/drop-bottle-orange.svg" alt="Orange Drop Bottle">
+          <h3 data-product-name>Orange Drop Bottle</h3>
+          <p>Price: $<span data-product-price="35">35</span></p>
+          <button data-add-to-cart-btn="7">Add to Cart</button>
+        </li>
+        <li class="product-item" data-id="8">
+          <img data-product-image src="images/drop-bottle-yellow.svg" alt="Yellow Drop Bottle">
+          <h3 data-product-name>Drop Bottle Yellow</h3>
+          <p>Price: $<span data-product-price="35">35</span></p>
+          <button data-add-to-cart-btn="8">Add to Cart</button>
+        </li>
+      </ul>
+    </section>
+    <!-- Products Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info-wrapper">
+          <h3>Let's Connect</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio molestiae similique laboriosam quia excepturi doloremque quidem unde voluptate quod temporibus?
+          </p>
+          <a href="mailto:info@drop.com">info@drop.com</a>
+          <a href="tel:+11234567890">1(123)456-7890</a>
+          <a href="#">1234 Street Ln, Virginia Beach, VA 12345</a>
+        </div>
+        <div class="contact-form-wrapper">
+          <h3>Send us a message</h3>
+          <form class="contact-form">
+            <div class="form-control">
+              <label for="name">Full Name</label>
+              <input type="text" id="name">
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="email">
+            </div>
+            <div class="form-control">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone">
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea id="message"></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer class="main-footer">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+        </ul>
+      </nav>
+      <p>Copyright</p>
+    </footer>
+    <!-- Footer End -->
+  </main>
+</body>
+</html>
